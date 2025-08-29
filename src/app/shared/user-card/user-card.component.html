@@ -1,0 +1,10 @@
+<mat-card class="user-card" (click)="goToDetail()">
+  <mat-card class="user-card" (click)="goToDetail()">
+    <div class="image-container">
+      <img mat-card-image [src]="user.avatar" alt="{{user.first_name}}">
+    </div>
+  </mat-card>
+  <mat-card-content>
+    {{ user.first_name }} {{ user.last_name }}
+  </mat-card-content>
+</mat-card>

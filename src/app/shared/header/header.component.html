@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="title">Task Quiz</span>
+  <span class="spacer"></span>
+  <mat-form-field appearance="outline" class="search-field">
+    <input matInput placeholder="Search by ID" [formControl]="searchControl">
+  </mat-form-field>
+</mat-toolbar>
+
+<div class="landing-container" [@fadeIn]>
+  <h1>Welcome to User Dashboard</h1>
+  <p>Search for users by ID and navigate to their details.</p>
+  <div class="animation-box">
+    <!-- <img src="assets/user-animation.svg" alt="animation" class="animation"> -->
+  </div>
+</div>

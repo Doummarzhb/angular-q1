@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <span>Users List</span>
+  <!-- <span class="spacer"></span> -->
+  <!-- <mat-form-field>
+    <input matInput placeholder="Search by ID" [formControl]="searchControl">
+  </mat-form-field> -->
+</mat-toolbar>
+
+
+<div class="table-container">
+  <table mat-table [dataSource]="displayedUsers" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="avatar">
+      <th mat-header-cell *matHeaderCellDef>Avatar</th>
+      <td mat-cell *matCellDef="let user">
+        <img [src]="user.avatar" class="avatar" alt="{{user.first_name}}">
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let user">{{user.first_name}} {{user.last_name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let user">{{user.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let user">{{user.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef>Details</th>
+      <td mat-cell *matCellDef="let user">
+        <button mat-button color="accent" (click)="goToDetail(user.id)">View</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div class="pager">
+    <button mat-button (click)="goToPage(page-1)" [disabled]="page<=1">Prev</button>
+    <span>Page {{page}} / {{totalPages}}</span>
+    <button mat-button (click)="goToPage(page+1)" [disabled]="page>=totalPages">Next</button>
+  </div>
+</div>

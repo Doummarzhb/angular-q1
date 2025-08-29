@@ -1,0 +1,13 @@
+<div class="back-button-container">
+  <button mat-button color="primary" (click)="back()">Back</button>
+</div>
+
+<mat-card *ngIf="user" class="user-card">
+  <img mat-card-image [src]="user.avatar" alt="{{user.first_name}}">
+  <mat-card-content>
+    <h2>{{user.first_name}} {{user.last_name}}</h2>
+    <p>ID: {{user.id}}</p>
+    <p>Email: {{user.email}}</p>
+  </mat-card-content>
+</mat-card>
+`
