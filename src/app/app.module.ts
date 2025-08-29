@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RouterModule, Routes } from '@angular/router';
 // import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatTableModule } from '@angular/material/table';
@@ -53,6 +54,7 @@ const routes: Routes = [
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     MatButtonModule,
     MatProgressBarModule,
