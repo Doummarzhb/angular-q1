@@ -1,9 +1,5 @@
 <mat-toolbar color="primary">
-  <span>Users List</span>
-  <!-- <span class="spacer"></span> -->
-  <!-- <mat-form-field>
-    <input matInput placeholder="Search by ID" [formControl]="searchControl">
-  </mat-form-field> -->
+  <span [@titleAnimation]>Users List</span>
 </mat-toolbar>
 
 
@@ -35,7 +31,8 @@
     <ng-container matColumnDef="details">
       <th mat-header-cell *matHeaderCellDef>Details</th>
       <td mat-cell *matCellDef="let user">
-        <button mat-button color="accent" (click)="goToDetail(user.id)">View</button>
+        <button mat-button color="accent" [routerLink]="['/users', user.id]">View</button>
+
       </td>
     </ng-container>
 
